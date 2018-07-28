@@ -16,8 +16,11 @@ a:hover, a:active {
 
 body{
   color: #fff;
-  background: rgb(0,128,128);
-  background: linear-gradient(90deg, rgba(0,128,128,1) 0%, rgba(132,217,233,1) 100%);
+  background-image: url('cover.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
   font-family: 'Roboto', sans-serif;
   font-size: 1.2em;
   font-weight: 300;
@@ -31,6 +34,7 @@ h1{
   margin-bottom: 5px;
 }
 
+.boldType{font-size: 1.3em; font-weight: 700;}
 .navPadding{padding: 5px;}
 
 
@@ -53,9 +57,27 @@ h1{
   height: auto;
 }
 
+.card{margin: 2em;}
+.card img{
+  border: .5em solid #fff;
+  border-bottom: 1em solid #fff;
+  margin-bottom: -10px;
+}
+.card figcaption{
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  font-weight: 700;
+}
+
 #cover{
-  min-height: 600px;
-  padding: 250px 0 200px 0;
+  min-height: 1000px;
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 input {
@@ -69,23 +91,23 @@ input {
 
 input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #fff;
-    opacity: 0.3;
+    opacity: 0.6;
   }
 
 input[type=email] {
   border-top: 0px;
   border-right: 0px;
-  border-bottom: 4px solid #333;
+  border-bottom: 4px solid #fff;
   border-left: 0px;
   margin-right: 20px;
 }
 
 input[type=submit] {
-  background-color: #008080;
+  background-color: #ff8080;
 }
 
 input[type=submit]:hover{
-  color: #333;
+  background-color: #ff9d9dff;
 }
 
 main{
@@ -104,6 +126,10 @@ main{
   margin: auto;
 }
 
+#rowReverse{flex-direction: row-reverse;}
+
+iframe {margin-right: 5em;}
+
 .mainGrey{
   background-color: #333;
   color: #fff;
@@ -111,7 +137,6 @@ main{
 
 .box{
   width: 300px;
-  min-height: 450px;
 }
 
 .boxDiv{
@@ -119,7 +144,7 @@ main{
 }
 .boxImg{
   width:auto;
-  height:300px;
+  height:250px;
   padding-top: 30px;
 }
 
@@ -136,6 +161,12 @@ main{
   #cover{
     width: 90%;
     margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
   }
 
   .content {
@@ -148,10 +179,11 @@ main{
     padding-top: 90px;
   }
 
-  .mainBox{width: 100%;}
+iframe {margin: 0px; margin-bottom: -8em;}
+#rowReverse{flex-direction: column-reverse;}
 
-  .box{
-    width: 90%;
-  }
+  .mainBox{width: 100%;}
+  .box{width: 90%;}
+  .boxImg{display: none;}
 
 }
